@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resolute Athlete App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero">
+        <p class="eyebrow">Athlete performance dashboard</p>
+        <h1>Train smarter, recover better.</h1>
+        <p class="hero-copy">
+          Track your workouts, log recovery, and stay on top of your training goals.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>Daily check-in</h2>
+        <form id="checkin-form">
+          <label for="activity">Activity</label>
+          <input id="activity" name="activity" type="text" placeholder="e.g. Tempo run" required />
+
+          <label for="minutes">Minutes</label>
+          <input id="minutes" name="minutes" type="number" min="1" max="240" placeholder="45" required />
+
+          <label for="notes">Notes</label>
+          <textarea id="notes" name="notes" rows="3" placeholder="How did it feel?"></textarea>
+
+          <button type="submit">Save session</button>
+        </form>
+      </section>
+
+      <section class="card">
+        <div class="card-header">
+          <h2>Recent sessions</h2>
+          <button id="clear-btn" class="ghost">Clear all</button>
+        </div>
+        <ul id="sessions-list" class="sessions-list"></ul>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
