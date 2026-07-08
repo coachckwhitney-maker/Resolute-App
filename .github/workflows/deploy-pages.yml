@@ -26,6 +26,7 @@ jobs:
         uses: actions/configure-pages@v5
         with:
           enablement: true
+          token: ${{ secrets.GH_PAGES_TOKEN }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
